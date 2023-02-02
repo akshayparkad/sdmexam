@@ -2,23 +2,26 @@ class fibonacci{
 
     public static void main(String args[]){
 
-        int num1=0;
-        int num2=1;
-        int num3;
-
-        int series = 20;
-
-        System.out.println(num1 + " "+num2);
-
-        for(int i=2; i<series; i++){
-
-            num3 = num1 + num2;
-
-            System.out.println(num3);
-
-            num1= num2;
-            num2 = num3;
+        int counter;
+        int num = 20;
+    
+        for(int i=2; i<=num; i++){
+    
+            counter =0;
+    
+            for(int j=1; j<=i; j++){
+    
+                if(i%j == 0){
+    
+                    counter++;
+                }
+            }
+    
+            if(counter == 2){
+    
+                System.out.println(i + " ");
+            }
         }
-        
+    
     }
 }
