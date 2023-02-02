@@ -1,24 +1,24 @@
 class fibonacci{
-
     public static void main(String args[]){
 
-        int num1=0;
-        int num2=1;
-        int num3;
+        int givenNumber = 999;
+        int myNum;
+        int temp;
 
-        int series = 20;
+        int total=0;
 
-        System.out.println(num1 + " "+num2);
+        myNum = givenNumber;
 
-        for(int i=2; i<series; i++){
-
-            num3 = num1 + num2;
-
-            System.out.println(num3);
-
-            num1= num2;
-            num2 = num3;
+        while(myNum != 0){
+            temp = myNum % 10;
+            total += temp*temp*temp;
+            myNum/=10;
         }
-        
+
+        if(total == givenNumber){
+            System.out.println("its armstrog number");
+        }else{
+            System.out.println("Not a armstrong number");
+        }
     }
 }
